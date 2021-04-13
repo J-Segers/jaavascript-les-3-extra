@@ -73,7 +73,7 @@ typeOfEmail2("jethrosegers@msn.com");
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
 function checkEmailValidity(email) {
-    if(email.includes(',') || email.charAt(email.length - 1) == '.') {
+    if(email.includes(',') || email.charAt(email.length - 1) === '.' || email.charAt(email.indexOf('@') + 1) === '.') {
         return false;
     }
     if(email.includes('@') && email.substring(email.indexOf("@"), email.length).includes(".")) {
